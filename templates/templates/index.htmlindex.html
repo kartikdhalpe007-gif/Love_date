@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Special Surprise for Sanskruti ❤️</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<!-- Floating hearts -->
+<div id="hearts-container"></div>
+
+<!-- Background music controls -->
+<div class="music-controls">
+    <button id="musicButton" onclick="toggleMusic()">
+        🎵 Play Romantic Music
+    </button>
+</div>
+
+<!-- Add your own romantic MP3 file in the static folder -->
+<audio id="backgroundMusic" loop>
+    <source src="{{ url_for('static', filename='romantic.mp3') }}"
+            type="audio/mpeg">
+</audio>
+
+    <div class="container">
+
+        <!-- Screen 1: Welcome -->
+        <section id="screen1" class="screen active">
+            <h1>💕 Hey, Sanskruti! 💕</h1>
+
+            <p>I have created something special just for you. 🥹</p>
+
+            <p>Are you ready for a little surprise?</p>
+
+            <button onclick="nextScreen(2)">
+                Open My Surprise ❤️
+            </button>
+        </section>
+
+        <!-- Screen 2: Sweet Message -->
+        <section id="screen2" class="screen">
+            <h1>🌸 A Little Message 🌸</h1>
+
+            <p>
+                Some people make ordinary moments feel special
+                just by being themselves.
+            </p>
+
+            <p>
+                You have a beautiful way of bringing happiness
+                into my thoughts. 😊❤️
+            </p>
+
+            <button onclick="nextScreen(3)">Next ❤️</button>
+        </section>
+
+        <!-- Screen 3: Special Feelings -->
+        <section id="screen3" class="screen">
+            <h1>💖 Something From My Heart 💖</h1>
+
+            <p>
+                I may not always find the perfect words,
+                but I wanted to do something special to tell you
+                how I feel.
+            </p>
+
+            <p>
+                So, I made this little surprise especially for you. 🌹
+            </p>
+
+            <button onclick="nextScreen(4)">Continue 💌</button>
+        </section>
+
+        <!-- Screen 4: The Proposal -->
+        <section id="screen4" class="screen">
+            <h1>🌹 One Special Question 🌹</h1>
+
+            <h2>Dear Sanskruti ❤️</h2>
+
+            <p>
+                I would love to get to know you better
+                and create beautiful memories together.
+            </p>
+
+            <h2>Would you like to go on a date with me? 🥹💕</h2>
+
+            <button onclick="nextScreen(5)">
+                Yes! ❤️
+            </button>
+
+            <button onclick="showMessage()">
+                I need a moment 🙈
+            </button>
+
+            <p id="responseMessage"></p>
+        </section>
+
+        <!-- Screen 5: Choose a Date -->
+        <section id="screen5" class="screen">
+            <h1>🗓️ Let's Plan Our Date 💕</h1>
+
+            <p>Choose a date for our special day!</p>
+
+            <input type="date" id="datePicker">
+
+            <br><br>
+
+            <button onclick="saveDate()">Confirm Date ❤️</button>
+
+            <p id="dateMessage"></p>
+        </section>
+
+        
+    <!-- Screen 6: Final Surprise -->
+    <section id="screen6" class="screen">
+        <h1>🎁 Your Special Surprise 🎁</h1>
+
+        <div class="final-heart">❤️</div>
+
+        <h2>Dear Sanskruti 🌹</h2>
+
+        <p>
+            If this little website made you smile,
+            then it has already made my day special. 🥹
+        </p>
+
+        <p>
+            I hope your life is always filled with happiness,
+            beautiful memories, and lots of reasons to smile. 💕
+        </p>
+
+        <h2>With lots of love and warm wishes! 💖</h2>
+
+        <button onclick="showFinalSurprise()">
+            Open Your Final Surprise 💌
+    </button>
+
+    <br>
+
+    <button onclick="showTabAgain()">
+        Start Again 💕
+    </button>
+</section>
+
+
+            </button>
+        </section>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
